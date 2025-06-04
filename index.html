@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Antójate sin hacer fila! Reserva tus delicias del quiosco</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>¡Antójate sin hacer fila!</h1>
+        <p>Tu recreo, a un clic de distancia.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#menu">Ver el menú</a></li>
+            <li><a href="#carrito">Carrito (0)</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="inicio">
+            <img src="imagen-quiosco.jpg" alt="Imagen del quiosco" width="800" height="400">
+            <div class="info-quiosco">
+                <h2>Quiosco Escolar "El Recreo Feliz"</h2>
+                <p>Ubicado en el patio principal.</p>
+                <p>Horario: Lunes a Viernes durante los recreos.</p>
+                <div class="botones-inicio">
+                    <a href="#menu" class="boton-principal">Ver el menú</a>
+                    <a href="#reservar" class="boton-secundario">Realizar reserva</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu">
+            <h2>Nuestro Menú</h2>
+            <div class="categoria">
+                <h3>Snacks</h3>
+                <div class="productos">
+                    <div class="producto">
+                        <img src="snack1.jpg" alt="Snack 1" width="150" height="100">
+                        <h4>Papas Fritas</h4>
+                        <p class="descripcion">Crujientes papas fritas con sal.</p>
+                        <p class="precio">S/ 1.50</p>
+                        <button class="boton-reservar" data-id="snack1" data-nombre="Papas Fritas" data-precio="1.50">Añadir al carrito</button>
+                    </div>
+                    </div>
+            </div>
+
+            <div class="categoria">
+                <h3>Bebidas</h3>
+                <div class="productos">
+                    <div class="producto">
+                        <img src="bebida1.jpg" alt="Bebida 1" width="150" height="100">
+                        <h4>Agua Mineral</h4>
+                        <p class="descripcion">Botella de agua fresca.</p>
+                        <p class="precio">S/ 1.00</p>
+                        <button class="boton-reservar" data-id="bebida1" data-nombre="Agua Mineral" data-precio="1.00">Añadir al carrito</button>
+                    </div>
+                    </div>
+            </div>
+
+            </section>
+
+        <section id="carrito">
+            <h2>Tu Carrito de Reservas</h2>
+            <ul id="lista-carrito">
+                </ul>
+            <p id="total-carrito">Total: S/ 0.00</p>
+            <button id="finalizar-reserva-btn" disabled>Finalizar Reserva</button>
+        </section>
+
+        <section id="reservar">
+            <h2>Finalizar tu Reserva</h2>
+            <form id="formulario-reserva">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" required>
+                </div>
+                <div>
+                    <label for="grado">Grado/Sección (Opcional):</label>
+                    <input type="text" id="grado">
+                </div>
+                <div>
+                    <label for="horario">Horario de Recogida:</label>
+                    <select id="horario" required>
+                        <option value="">Seleccionar horario</option>
+                        <option value="recreo1">Primer Recreo</option>
+                        <option value="recreo2">Segundo Recreo</option>
+                    </select>
+                </div>
+                <div id="resumen-reserva">
+                    <h3>Resumen de tu pedido:</h3>
+                    <ul id="productos-reserva">
+                        </ul>
+                    <p id="total-reserva">Total a pagar: S/ 0.00</p>
+                </div>
+                <button type="submit">Confirmar Reserva</button>
+            </form>
+            <div id="mensaje-confirmacion" style="display:none;">
+                <p>¡Tu reserva ha sido confirmada! Número de reserva: <span id="numero-reserva"></span>. Por favor, acércate al quiosco en el horario seleccionado.</p>
+            </div>
+        </section>
+
+        <section id="informacion">
+            <h2>Información Adicional</h2>
+            <p>Preguntas frecuentes, contacto, políticas, etc.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Quiosco Escolar "El Recreo Feliz"</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

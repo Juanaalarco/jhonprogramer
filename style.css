@@ -1,0 +1,196 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#inicio img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.info-quiosco {
+    text-align: center;
+}
+
+.botones-inicio a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.boton-principal {
+    background-color: #28a745;
+}
+
+.boton-secundario {
+    background-color: #dc3545;
+}
+
+#menu .categoria {
+    margin-bottom: 20px;
+}
+
+#menu .productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#menu .producto {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    width: calc(33% - 20px); /* Aproximadamente 3 productos por fila */
+    box-sizing: border-box;
+}
+
+#menu .producto img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.boton-reservar {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#carrito ul {
+    list-style: none;
+    padding: 0;
+}
+
+#carrito li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#carrito li:last-child {
+    border-bottom: none;
+}
+
+#formulario-reserva div {
+    margin-bottom: 15px;
+}
+
+#formulario-reserva label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#formulario-reserva input[type="text"],
+#formulario-reserva select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#formulario-reserva button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#resumen-reserva {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+#resumen-reserva ul {
+    list-style: none;
+    padding: 0;
+}
+
+#resumen-reserva li {
+    padding: 5px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para pantallas más pequeñas (responsive) */
+@media (max-width: 768px) {
+    #menu .productos {
+        flex-direction: column;
+    }
+    #menu .producto {
+        width: 100%;
+    }
+}
